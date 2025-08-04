@@ -3,9 +3,9 @@ let numero = parseInt(
   prompt("1. Digite um número para saber se é par ou ímpar:")
 );
 if (numero % 2 === 0) {
-  alert("É par");
+  console.log("É par");
 } else {
-  alert("É ímpar");
+  console.log("É ímpar");
 }
 
 // 2. Maior de três números
@@ -13,11 +13,11 @@ let n1 = parseFloat(prompt("2. Primeiro número:"));
 let n2 = parseFloat(prompt("Segundo número:"));
 let n3 = parseFloat(prompt("Terceiro número:"));
 if (n1 > n2 && n1 > n3) {
-  alert("Maior: " + n1);
+  console.log("Maior: " + n1);
 } else if (n2 > n3) {
-  alert("Maior: " + n2);
+  console.log("Maior: " + n2);
 } else {
-  alert("Maior: " + n3);
+  console.log("Maior: " + n3);
 }
 
 // 3. Média de 3 notas
@@ -26,9 +26,9 @@ let nota2 = parseFloat(prompt("Digite a segunda nota:"));
 let nota3 = parseFloat(prompt("Digite a terceira nota:"));
 let media = (nota1 + nota2 + nota3) / 3;
 if (media >= 7) {
-  alert("Aprovado! Média: " + media.toFixed(2));
+  console.log("Aprovado! Média: " + media.toFixed(2));
 } else {
-  alert("Reprovado. Média: " + media.toFixed(2));
+  console.log("Reprovado. Média: " + media.toFixed(2));
 }
 
 // 4. Maioridade
@@ -36,9 +36,9 @@ let anoNascimento = parseInt(prompt("4. Digite seu ano de nascimento:"));
 let anoAtual = 2025;
 let idade = anoAtual - anoNascimento;
 if (idade >= 18) {
-  alert("Maior de idade");
+  console.log("Maior de idade");
 } else {
-  alert("Menor de idade");
+  console.log("Menor de idade");
 }
 
 // 5. Conversão de temperatura
@@ -48,21 +48,21 @@ let tipo = prompt(
 let temp = parseFloat(prompt("Digite a temperatura:"));
 if (tipo === "C") {
   let fahrenheit = temp * 1.8 + 32;
-  alert("Temperatura em Fahrenheit: " + fahrenheit.toFixed(2));
+  console.log("Temperatura em Fahrenheit: " + fahrenheit.toFixed(2));
 } else if (tipo === "F") {
   let celsius = (temp - 32) / 1.8;
-  alert("Temperatura em Celsius: " + celsius.toFixed(2));
+  console.log("Temperatura em Celsius: " + celsius.toFixed(2));
 } else {
-  alert("Opção inválida");
+  console.log("Opção inválida");
 }
 
 // 6. Múltiplos
 let a = parseInt(prompt("6. Digite o primeiro número:"));
 let b = parseInt(prompt("Digite o segundo número:"));
 if (a % b === 0 || b % a === 0) {
-  alert("Pelo menos um dos números é múltiplo do outro");
+  console.log("Pelo menos um dos números é múltiplo do outro");
 } else {
-  alert("Nenhum dos números é múltiplo do outro");
+  console.log("Nenhum dos números é múltiplo do outro");
 }
 
 // 7. Tipo de triângulo
@@ -71,14 +71,14 @@ let lado2 = parseFloat(prompt("Lado 2 do triângulo:"));
 let lado3 = parseFloat(prompt("Lado 3 do triângulo:"));
 if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
   if (lado1 === lado2 && lado2 === lado3) {
-    alert("Triângulo equilátero");
+    console.log("Triângulo equilátero");
   } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-    alert("Triângulo isósceles");
+    console.log("Triângulo isósceles");
   } else {
-    alert("Triângulo escaleno");
+    console.log("Triângulo escaleno");
   }
 } else {
-  alert("Triângulo inválido");
+  console.log("Triângulo inválido");
 }
 
 // 8. Restaurante com switch
@@ -87,19 +87,19 @@ let prato = prompt(
 ).toLowerCase();
 switch (prato) {
   case "pizza":
-    alert("Preço: R$25\nDescrição: Pizza de queijo e calabresa.");
+    console.log("Preço: R$25\nDescrição: Pizza de queijo e calabresa.");
     break;
   case "hamburguer":
-    alert("Preço: R$18\nDescrição: Hambúrguer artesanal com batata.");
+    console.log("Preço: R$18\nDescrição: Hambúrguer artesanal com batata.");
     break;
   case "salada":
-    alert("Preço: R$15\nDescrição: Salada verde com frango grelhado.");
+    console.log("Preço: R$15\nDescrição: Salada verde com frango grelhado.");
     break;
   case "macarrao":
-    alert("Preço: R$20\nDescrição: Macarrão ao molho bolonhesa.");
+    console.log("Preço: R$20\nDescrição: Macarrão ao molho bolonhesa.");
     break;
   default:
-    alert("Prato inválido");
+    console.log("Prato inválido");
     break;
 }
 
@@ -117,7 +117,7 @@ if (imc < 18.5) {
 } else {
   classificacao = "Obesidade";
 }
-alert("IMC: " + imc.toFixed(2) + " - " + classificacao);
+console.log("IMC: " + imc.toFixed(2) + " - " + classificacao);
 
 // 10. Números pares com while
 let limitePar = parseInt(
@@ -131,7 +131,7 @@ while (i <= limitePar) {
   }
   i++;
 }
-alert("Pares: " + pares);
+console.log("Pares: " + pares);
 
 // 11. Números ímpares com for
 let limiteImpar = parseInt(
@@ -143,7 +143,7 @@ for (let j = 0; j <= limiteImpar; j++) {
     impares += j + " ";
   }
 }
-alert("Ímpares: " + impares);
+console.log("Ímpares: " + impares);
 
 // 12. Fatorial
 let numFat = parseInt(prompt("12. Digite um número para calcular o fatorial:"));
@@ -153,4 +153,4 @@ while (k <= numFat) {
   fat *= k;
   k++;
 }
-alert("Fatorial de " + numFat + " é " + fat);
+console.log("Fatorial de " + numFat + " é " + fat);
