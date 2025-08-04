@@ -33,7 +33,7 @@ if (media >= 7) {
 
 // 4. Maioridade
 let anoNascimento = parseInt(prompt("4. Digite seu ano de nascimento:"));
-let anoAtual = new Date().getFullYear();
+let anoAtual = 2025;
 let idade = anoAtual - anoNascimento;
 if (idade >= 18) {
   alert("Maior de idade");
